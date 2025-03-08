@@ -58,14 +58,20 @@ The generated Makefile includes common commands:
 
 ## Installation
 
-1. Download the script:
+1. Clone the repository:
 ```bash
-curl -O https://raw.githubusercontent.com/yourusername/go-project-setup/main/go-project-setup.sh
+git clone https://github.com/AmirHosein-Vahed/go-project-setup.git
+cd go-project-setup
 ```
 
-2. Make it executable:
+2. Make the script executable:
 ```bash
 chmod +x go-project-setup.sh
+```
+
+You can also copy the script to your local bin directory for system-wide access:
+```bash
+sudo cp go-project-setup.sh /usr/local/bin/go-project-setup
 ```
 
 ## Usage
