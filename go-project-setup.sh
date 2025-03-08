@@ -24,7 +24,7 @@ cd "$PROJECT_NAME"
 
 # Create main.go in cmd directory
 mkdir -p "cmd/$PROJECT_NAME"
-cat > "cmd/$PROJECT_NAME/main.go" << EOF
+cat > "cmd/$PROJECT_NAME/main.go" << 'EOF'
 package main
 
 import (
@@ -40,7 +40,7 @@ EOF
 
 # Create a basic internal package
 mkdir -p "internal/app"
-cat > "internal/app/app.go" << EOF
+cat > "internal/app/app.go" << 'EOF'
 package app
 
 // App represents the main application
@@ -64,7 +64,7 @@ EOF
 go mod init "github.com/yourusername/$PROJECT_NAME"
 
 # Create README.md
-cat > "README.md" << EOF
+cat > "README.md" << 'EOF'
 # $PROJECT_NAME
 
 ## Description
@@ -73,7 +73,7 @@ Add your project description here.
 
 ## Project Structure
 
-\`\`\`
+```
 .
 ├── api/            # API definitions (proto files, OpenAPI/Swagger specs)
 ├── build/          # Build and CI/CD related files
@@ -89,7 +89,7 @@ Add your project description here.
 ├── test/          # Additional test applications and test data
 ├── tools/         # Development tools
 └── web/           # Web specific components
-\`\`\`
+```
 
 ## Getting Started
 
@@ -99,17 +99,17 @@ Add your project description here.
 
 ### Installation
 
-\`\`\`bash
+```bash
 git clone https://github.com/yourusername/$PROJECT_NAME.git
 cd $PROJECT_NAME
 go mod download
-\`\`\`
+```
 
 ### Running the Application
 
-\`\`\`bash
+```bash
 go run cmd/$PROJECT_NAME/main.go
-\`\`\`
+```
 
 ## License
 
@@ -119,7 +119,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 EOF
 
 # Create .gitignore
-cat > ".gitignore" << EOF
+cat > ".gitignore" << 'EOF'
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -209,5 +209,4 @@ echo -e "${BLUE}Project initialized at: ${YELLOW}$(pwd)${NC}"
 echo -e "${BLUE}To get started:${NC}"
 echo -e "  cd $PROJECT_NAME"
 echo -e "  go mod tidy"
-echo -e "  make run"
-EOF 
+echo -e "  make run" 
